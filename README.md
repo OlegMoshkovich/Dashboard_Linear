@@ -13,5 +13,5 @@ api https://sheetsu.com/apis/v1.0/1674c443ae00 is generated usgin Google sheet w
 Axios library is used to fetch data.
 
 
-npm intall
+
 npm run start
