@@ -15,7 +15,7 @@ function BarRecharts(props){
   var data = props.siteInfo
   return props.isLoading === true
 
-  ? <div>LOADING</div>
+  ? <div>Loading Bar Chart</div>
   :<div>
 
   <div className = "col-sm-12 text-center" >

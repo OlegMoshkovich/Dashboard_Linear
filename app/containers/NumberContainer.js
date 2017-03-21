@@ -1,13 +1,8 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
 
-var BarComponent = require('../components/A_BarRecharts');
-var LineComponent = require('../components/A_LineRecharts');
- var PieComponentC = require('../components/A_PieChartjs');
 
-var PieComponentR = require('../components/A_PieRecharts');
-
-var NumberContainer = require('../containers/NumberContainer');
+var NumberComponent = require('../components/A_NumberComponent');
 
 var axios = require('axios');
 
@@ -18,7 +13,11 @@ var Brick = []
 var Sons = []
 var companies = {}
 
-var DashboardContainer = React.createClass({
+var text = "Total Workers on Site";
+
+var NumberContainer = React.createClass({
+
+
   getInitialState:function(){
   return{
     isLoading:true,
@@ -26,9 +25,11 @@ var DashboardContainer = React.createClass({
     }
   },
 
+
   componentDidMount:function(){
       axios.get('https://sheetsu.com/apis/v1.0/1674c443ae00')
         .then(function (response) {
+          console.log(response)
           response.data.map(function(worker){
             worker.Age = Number(worker.Age)
             worker.Experience = Number(worker.Experience)
@@ -43,8 +44,11 @@ var DashboardContainer = React.createClass({
         })
     },
 
-  render:function(){
 
+
+
+
+  render:function(){
   if (this.state.isLoading === false){
     siteInfoArr = this.state.siteInfo,
     SafetyGroup = siteInfoArr.filter(function(worker){
@@ -64,45 +68,15 @@ var DashboardContainer = React.createClass({
 
     return(
       <div>
-
-      <div className = "col-sm-12  text-center" >
-      <NumberContainer/>
-      </div>
-
-      <div className = "col-sm-3 col-sm-offset-1 text-center">
-      <PieComponentR
-      isLoading ={this.state.isLoading}
-      siteInfo={this.state.siteInfo}
-      companies = {companies}
-      />
-      </div>
-
-      <div className = "col-sm-2 col-sm-offset-1 text-center">
-      <PieComponentC
-      isLoading ={this.state.isLoading}
-      siteInfo={this.state.siteInfo}
-      companies = {companies}
-      />
-      </div>
-
-      <div className = "col-sm-12 text-center" >
-      <BarComponent
-      isLoading ={this.state.isLoading}
-      siteInfo={this.state.siteInfo}
-      companies = {companies}
-      />
-      </div>
-
-
-
-
-
-
+          <NumberComponent
+          isLoading ={this.state.isLoading}
+          siteInfo={this.state.siteInfo}
+          companies = {companies}
+          text = {text}
+          />
       </div>
     )
   }
-
 })
 
-
-module.exports = DashboardContainer
+module.exports = NumberContainer

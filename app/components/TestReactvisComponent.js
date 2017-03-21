@@ -1,6 +1,7 @@
 var React = require('react')
 var Space = require('../styles').space
 
+
 import {  XYPlot,
   XAxis,
   YAxis,
@@ -13,6 +14,7 @@ import {  XYPlot,
   HeatmapSeries,
   ContinuousColorLegend,
   VerticalBarSeries
+
 } from 'react-vis';
 
 
@@ -153,6 +155,8 @@ var TestReactvisComponent = React.createClass({
                     ]}/>
               </XYPlot>
           </div>
+
+
 
       </div>
     )

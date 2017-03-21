@@ -12,7 +12,7 @@ var Main = React.createClass({
           <li><a href="/#/TestRecharts">Recharts</a></li>
           <li><a href="/#/TestReactvis">ReactVis|Uber</a></li>
           <li><a href="/#/TestChartjs">Chartjs</a></li>
-
+          <li><a href="/#/number">NumberComponent</a></li>
           <li><a href="/#/dashboard">Dash Sample</a></li>
 
         </ul>

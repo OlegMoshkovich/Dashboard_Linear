@@ -1,5 +1,5 @@
 var React = require('react');
-var RechartsTest = require('../components/RechartsTest')
+// var RechartsTest = require('../components/RechartsTest')
 var PropTypes = React.PropTypes
 var axios = require('axios')
 var siteInfoArr = []

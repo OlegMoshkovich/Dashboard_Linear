@@ -12,12 +12,14 @@ var Home = require("../components/Home");
 
 var WorkerInfoContainer = require('../containers/WorkerInfoContainer')
 var DashboardContainer = require('../containers/DashboardContainer')
+var NumberContainer = require('../containers/NumberContainer')
 
 //Test Components
 var TestRechartsComponent = require('../components/TestRechartsComponent')
 var TestReactvisComponent = require('../components/TestReactvisComponent')
 var TestChartjsComponent = require('../components/TestChartjsComponent')
 
+var TestReactvisComponent_1 = require('../components/TestReactvisComponent_1')
 
 
 var routes = (
@@ -29,9 +31,12 @@ var routes = (
       <Router path = "TestReactvis" component = {TestReactvisComponent}/>
       <Router path = "TestChartjs" component = {TestChartjsComponent}/>
 
+      <Router path = "TestReactvis_1" component = {TestReactvisComponent_1}/>
+
 
 
       <Router path = 'dashboard' component = {DashboardContainer}/>
+      <Router path = 'number' component = {NumberContainer}/>
 
     </Route>
   </Router>

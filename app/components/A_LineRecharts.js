@@ -12,7 +12,7 @@ function LineRecharts(props){
   var data = props.siteInfo
   return props.isLoading === true
 
-  ? <div></div>
+  ? <div>Loading Line Chart</div>
   :<div className = "col-sm-12 text-center" >
         <LineChart width={1000} height={300} data={data}>
         <XAxis  />
@@ -23,7 +23,7 @@ function LineRecharts(props){
         <Line type="monotone" dataKey="Role" stroke="#545454" activeDot={{r: 5}}/>
         <Tooltip/>
         <Legend />
-      
+
         </LineChart>
   </div>
 }

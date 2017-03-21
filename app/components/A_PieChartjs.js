@@ -8,6 +8,7 @@ var pieOptions = {
       animatable: false
 };
 
+
 function PieChartjs(props){
 var pieData = [
             {
@@ -36,10 +37,10 @@ var pieData = [
             }
         ];
 
-console.log(props.companies.SafetyGroup)
+
 
 return props.isLoading === true
-? <div></div>
+? <div>Loading Pie Chart</div>
 :<div>
   <div className = "col-sm-4 text-center" style = {Space}>
     <PieChart data={pieData} options={pieOptions}/>
