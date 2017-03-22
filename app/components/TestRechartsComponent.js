@@ -53,7 +53,7 @@ var TestRechartsComponent = React.createClass({
     //console.log(data.BMI);
     return(
 <div>
-<div ClassName = "col-sm-offset-3" style = {space}>
+<div className = "col-sm-offset-3" style = {space}>
 Rechart components were found to be relatively straight forward to use
 </div>
 <div className = "col-sm-6 col-sm-offset-3 text-center" >
