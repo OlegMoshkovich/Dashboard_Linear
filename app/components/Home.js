@@ -8,8 +8,8 @@ var Home = React.createClass({
   render:function(){
     return(
       <div className = "jumbotron col-sm-12 text-center" style = {transparentBg}>
-          <h1>.</h1>
-          <p className = 'lead'>Dashboard Research </p>
+          <h1 className = 'lead'>Western Growers Pilot</h1>
+          <p>Sample Pilot Report </p>
      </div>
     )
   }

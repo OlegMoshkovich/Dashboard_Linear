@@ -14,7 +14,7 @@ module.exports = {
     path: __dirname + '/dist',
     filename: "index_bundle.js"
   },
-  
+
   module: {
     loaders: [
         {
@@ -24,7 +24,17 @@ module.exports = {
           query: {
             presets: ['es2015', 'react']
           }
+        },
+        {
+          test: /\.css$/,
+          loader: 'style-loader!css-loader',
+          include: /flexboxgrid/
+        },
+        {
+          test: /\.(jpg|png|svg)$/,
+          loader: 'file'
         }
+
       ]
 
   },

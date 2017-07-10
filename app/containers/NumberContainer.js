@@ -1,9 +1,10 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
 var NumberComponent = require('../components/A_NumberComponent');
-
 var axios = require('axios');
 var text = "Total Workers on Site";
+
+
 
 var NumberContainer = React.createClass({
   getInitialState:function(){
@@ -34,7 +35,7 @@ var NumberContainer = React.createClass({
       var number;
       var groups;
       var TotalWorkers;
-      
+
       for ( var i=0; i < siteInfo.length;i++){
         var name = siteInfo[i].Group
         if (groupObject[name]){
