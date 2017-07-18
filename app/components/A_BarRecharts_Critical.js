@@ -5,6 +5,7 @@ var data1 = require('../data/user_sample')
 var data2 = require('../data/user_sample1')
 import $ from 'jquery';
 
+
 import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,} from 'recharts';
 var chartWidth = $( window ).width() - 100;
 
@@ -22,6 +23,7 @@ function BarRecharts(props){
 
   <div className = "col-sm-12 text-center" >
     <h3>Critical Events </h3>
+    <p>Events omitted from the HCS devices are considered critical.</p>
   <BarChart width={chartWidth} height={300} data={data} margin={{top: 5, right: 30, left: 20, bottom: 5}}>
          <XAxis dataKey="Workers"/>
          <YAxis/>
@@ -29,10 +31,13 @@ function BarRecharts(props){
          <Tooltip/>
          <Legend />
 
-         <Bar dataKey="EmergencyAlert" fill="#673ab7" />
-         <Bar dataKey="SafetyAlert" fill="#ff5722" />
+         <Bar dataKey="EmergencyAlert" fill="#963019" />
+         <Bar dataKey="SafetyAlert" fill="#f2b632" />
+         <span class="glyphicons glyphicons-exclamation-sign"></span>
 
         </BarChart>
+
+
     </div>
   </div>
 }

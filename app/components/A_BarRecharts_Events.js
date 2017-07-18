@@ -21,17 +21,18 @@ function BarRecharts(props){
   :<div>
 
   <div className = "col-sm-12 text-center" >
-  <h3>Events</h3>
+  <h2>Events</h2>
+  <p>Registered signals of higher risk order are considered to be be events in the system.</p>
   <BarChart width={chartWidth} height={300} data={data} margin={{top: 5, right: 30, left: 20, bottom: 5}}>
          <XAxis dataKey="Workers"/>
          <YAxis/>
-         <CartesianGrid strokeDasharray="1 1"/>
+         <CartesianGrid strokeDasharray="3 3"/>
          <Tooltip/>
          <Legend />
-         <Bar dataKey="Falls" fill="#e51c23" />
-         <Bar dataKey="StruckBy" fill="#673ab7" />
-         <Bar dataKey="Trips" fill="#009688" />
-         <Bar dataKey="Slips" fill="#ff5722" />
+         <Bar dataKey="Falls" stackId="a" fill=" #e05038" />
+         <Bar dataKey="StruckBy" stackId="a" fill="e05038" />
+         <Bar dataKey="Trips" stackId="a" fill="#e6af4b" />
+         <Bar dataKey="Slips" stackId="a" fill="#f2cbbc"  />
         </BarChart>
     </div>
   </div>

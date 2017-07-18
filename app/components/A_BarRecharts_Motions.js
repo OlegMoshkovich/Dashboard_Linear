@@ -20,6 +20,7 @@ function BarRecharts(props){
   ? <div>Loading Motion Information</div>
   :<div>
   <h3>Motions</h3>
+  <p> Ergonomically incorrect motions are registered in accordance with predifiend threshold</p>
   <div className = "col-sm-12 text-center" >
   <BarChart width={chartWidth} height={300} data={data} margin={{top: 5, right: 30, left: 20, bottom: 5}}>
          <XAxis dataKey="Workers"/>
@@ -27,10 +28,10 @@ function BarRecharts(props){
          <CartesianGrid strokeDasharray="1 1"/>
          <Tooltip/>
          <Legend />
-         <Bar dataKey="Bends" fill="#e51c23" />
-         <Bar dataKey="Twists" fill="#673ab7" />
-         <Bar dataKey="Squats" fill="#009688" />
-         <Bar dataKey="Reaches" fill="#ff5722" />
+         <Bar dataKey="Bends" stackId="a" fill="#252839" />
+         <Bar dataKey="Twists" stackId="a" fill="#f2b632" />
+         <Bar dataKey="Squats" stackId="a" fill="#677077" />
+         <Bar dataKey="Reaches" stackId="a" fill="#b5b5b7" />
         </BarChart>
     </div>
   </div>

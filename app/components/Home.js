@@ -10,6 +10,7 @@ var Home = React.createClass({
       <div className = "jumbotron col-sm-12 text-center" style = {transparentBg}>
           <h1 className = 'lead'>Western Growers Pilot</h1>
           <p>Sample Pilot Report </p>
+          
      </div>
     )
   }

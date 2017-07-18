@@ -14,9 +14,13 @@ function LineRecharts(props){
   var data = props.siteInfo
   return props.isLoading === true
 
-  ? <div>Loading Line Chart</div>
+  ? <div>Loading the Curve of Risk</div>
   :<div className = "col-sm-12 text-center" >
-  <h3>Risk Profiles </h3>
+  <h3>Risk Distribution </h3>
+  <p>Data set is organized based on the weighted sum of all events and motions. </p>
+    <a href="https://docs.google.com/spreadsheets/d/1Ic14dT8B4QPsXyxPWcHxGJSeBCtVCMqYmBao881WcMM/edit#gid=858424247" target="_blank">Risk Levels</a>
+
+
         <LineChart width={chartWidth} height={300} data={data} margin={{top: 5, right: 30, left: 20, bottom: 5}}>
         <XAxis dataKey="Workers"/>
         <YAxis/>

@@ -5,7 +5,7 @@ var styles = {
    },
   type:{
      "color":"#3b3a36",
-     "background-color":"white"
+     "backgroundColor":"white"
    },
   space:{
      "margin":"40px"

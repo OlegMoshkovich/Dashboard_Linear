@@ -6,6 +6,7 @@ var BarComponentEvents = require('../components/A_BarRecharts_Events');
 var BarComponentCritical = require('../components/A_BarRecharts_Critical');
 var BarComponentTotal = require('../components/A_BarRecharts_Total');
 var BarComponentRisk = require('../components/A_BarRecharts_Risk');
+var BarComponentStacked = require('../components/A_BarRecharts_Stacked');
 var LineComponentRisk = require('../components/A_LineRecharts_Risk');
 
 
@@ -16,13 +17,10 @@ var siteInfoArrNew = []
 var riskLevel = []
 var lowRiskLevel = []
 
-var SafetyGroup = []
-var PowerElect = []
-var Brick = []
-var Sons = []
-var companies = {}
 var title = {}
 var i;
+
+
 var DashboardContainer = React.createClass({
   getInitialState:function(){
   return{
@@ -79,6 +77,8 @@ var DashboardContainer = React.createClass({
       lowRiskLevel.push(siteInfoArr[i])
     }
 
+    lowRiskLevel.reverse()
+
 
     }
 
@@ -86,11 +86,19 @@ var DashboardContainer = React.createClass({
       <div>
 
 
+
       <div className = "col-sm-12 text-center" >
       <BarComponentCritical
       isLoading ={this.state.isLoading}
       siteInfo={siteInfoArrNew}
-      companies = {companies}
+
+      />
+      </div>
+
+      <div className = "col-sm-12 text-center" >
+      <LineComponentRisk
+      isLoading ={this.state.isLoading}
+      siteInfo={siteInfoArrNew}
       />
       </div>
 
@@ -98,7 +106,7 @@ var DashboardContainer = React.createClass({
       <BarComponentEvents
       isLoading ={this.state.isLoading}
       siteInfo={siteInfoArrNew}
-      companies = {companies}
+
       />
       </div>
 
@@ -106,34 +114,38 @@ var DashboardContainer = React.createClass({
       <BarComponentMotions
       isLoading ={this.state.isLoading}
       siteInfo={siteInfoArrNew}
-      companies = {companies}
+
       />
       </div>
-
-
-
       <div className = "col-sm-12 text-center" >
-      <LineComponentRisk
+      <BarComponentStacked
       isLoading ={this.state.isLoading}
       siteInfo={siteInfoArrNew}
-      companies = {companies}
+
+      title = {"Stacked Event + Motions"}
       />
       </div>
+
+
+
+
 
       <div className = "col-sm-12 text-center" >
       <BarComponentTotal
       isLoading ={this.state.isLoading}
       siteInfo={lowRiskLevel}
-      companies = {companies}
+
       title = {"Low Risk Profiles"}
       />
       </div>
+
+
 
       <div className = "col-sm-12 text-center" >
       <BarComponentTotal
       isLoading ={this.state.isLoading}
       siteInfo={riskLevel}
-      companies = {companies}
+
       title = {"High Risk Profiles"}
       />
       </div>
